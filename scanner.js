@@ -45,14 +45,34 @@ async function saveBarcode(kode){
         }
       );
 
-    const hasil =
-      await response.json();
+    const response = await fetch(
+  WEBAPP_URL,
+  {
+    method:"POST",
+    headers:{
+      "Content-Type":"application/json"
+    },
+    body:JSON.stringify({
+      action:"SAVE_BARCODE",
+      nik:nik,
+      kodeLokasi:kode
+    })
+  }
+);
 
-    if(hasil.status){
+// const text =
+// await response.text();
 
-      alert(
-        "Barcode berhasil disimpan"
-      );
+// alert(text);
+
+//     const hasil =
+//       await response.json();
+
+//     if(hasil.status){
+
+//       alert(
+//         "Barcode berhasil disimpan"
+//       );
 
     }
 
