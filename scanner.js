@@ -60,10 +60,10 @@ async function saveBarcode(kode){
   }
 );
 
-// const text =
-// await response.text();
+const text =
+await response.text();
 
-// alert(text);
+alert(text);
 
 //     const hasil =
 //       await response.json();
