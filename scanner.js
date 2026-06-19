@@ -1,3 +1,6 @@
+const WEBAPP_URL =
+"https://script.google.com/a/macros/siantarmaju.com/s/AKfycbyJgeBI1OkH-aKmuntJ4K_bD_4XmSttHtg32J7KmRuwpAFTmegGNDq4T5tMT7dXdfI_/exec";
+
 const nik =
 new URLSearchParams(
 window.location.search
