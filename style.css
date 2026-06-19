@@ -1,1 +1,15 @@
+body{
+  font-family: Arial, sans-serif;
+  text-align:center;
+  margin:20px;
+}
 
+#reader{
+  width:100%;
+  max-width:500px;
+  margin:auto;
+}
+
+h2{
+  margin-bottom:20px;
+}
