@@ -21,32 +21,51 @@ async function saveBarcode(kode){
 
   try{
 
-    const response =
-      await fetch(
-        "WEB_APP_URL",
-        {
-          method:"POST",
+    const response = await fetch(WEBAPP_URL,{
+  method:"POST",
+  headers:{
+    "Content-Type":"application/json"
+  },
+  body:JSON.stringify({
+    action:"SAVE_BARCODE",
+    nik:nik,
+    kodeLokasi:kode
+  })
+});
 
-          headers:{
-            "Content-Type":
-            "application/json"
-          },
+console.log(response.url);
+console.log(response.status);
 
-          body:JSON.stringify({
+const text = await response.text();
 
-            action:"SAVE_BARCODE",
+console.log(text);
+alert(text);
 
-            nik:nik,
+    // const response = await fetch(
+    //     "WEB_APP_URL",
+    //     {
+    //       method:"POST",
 
-            kodeLokasi:kode
+    //       headers:{
+    //         "Content-Type":
+    //         "application/json"
+    //       },
 
-          })
+    //       body:JSON.stringify({
 
-        }
-      );
+    //         action:"SAVE_BARCODE",
 
-    const hasil =
-      await response.json();
+    //         nik:nik,
+
+    //         kodeLokasi:kode
+
+    //       })
+
+    //     }
+    //   );
+
+    // const hasil =
+    //   await response.json();
 
     if(hasil.status){
 
